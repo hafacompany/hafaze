@@ -4732,7 +4732,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     var isTlsPort = ['443', '2053', '2083', '2087', '2096', '8443'].includes(portStr);
                     var tlsVal = isTlsPort ? 'tls' : 'none';
                     var remark = u.username;
-                    links.push('vle' + 'ss://' + (u.uuid || '') + '@' + ip + ':' + portStr + '?path=%2Fhafa&security=' + tlsVal + '&encryption=none&insecure=0&host=' + host + '&fp=' + fp + '&type=ws&allowInsecure=0&sni=' + host + '#' + encodeURIComponent(remark));
+                    links.push('vle' + 'ss://' + (u.uuid || '') + '@' + ip + ':' + portStr + '?path=%2Fhafa&security=' + tlsVal + '&encryption=none&insecure=0&host=' + host + '&fp=' + fp + '&alpn=h3%2Ch2%2Chttp%2F1.1&type=ws&allowInsecure=0&sni=' + host + '#' + encodeURIComponent(remark));
                 });
             });
             return links.join('\\n');
