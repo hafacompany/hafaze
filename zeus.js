@@ -4415,7 +4415,7 @@ const UPDATE_FIX = "constsCURRENT_VERSION='d.d.d'";
 let cachedIpsData = {};
 async function fetchIpsList() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/IR-NETLIFY/zeus/refs/heads/main/ips.txt');
+        const response = await fetch('https://raw.githubusercontent.com/hafacompany/hafaze/main/ips.txt');
         if (!response.ok) throw new Error('Fetch failed');
         const text = await response.text();
         const blocks = text.split('----------');
