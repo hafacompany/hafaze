@@ -746,8 +746,8 @@ const SubscriptionService = {
 			let rem = user.limit_req - (user.used_req || 0);
 			remReq = rem > 0 ? rem.toLocaleString() + "Req" : "0Req";
 		}
-		const infoRemark = "📊 remaining | \u200E" + remVol + " | \u200E" + remTime + " | \u200E" + remReq;
-		links.push(atob("dmxlc3M6Ly8=") + user.uuid + "@" + host + ":80?path=%2Fhafa&security=none&encryption=none&host=" + host + "&fp=" + fp + "&type=ws#" + encodeURIComponent(infoRemark));
+		// const infoRemark = "📊 remaining | ‎" + remVol + " | ‎" + remTime + " | ‎" + remReq;
+		// links.push(atob("dmxlc3M6Ly8=") + user.uuid + "@" + host + ":80?path=%2Fhafa&security=none&encryption=none&host=" + host + "&fp=" + fp + "&type=ws#" + encodeURIComponent(infoRemark));
 		ips.forEach((ip) => {
 			ports.forEach((portStr) => {
 				const isTlsPort = ["443", "2053", "2083", "2087", "2096", "8443"].includes(portStr);
@@ -771,7 +771,7 @@ const SubscriptionService = {
 				"Content-Type": "text/plain; charset=utf-8",
 				"Access-Control-Allow-Origin": "*",
 				"Cache-Control": "no-store",
-				// "Subscription-Userinfo": subUserInfo,
+				"Subscription-Userinfo": subUserInfo,
 			},
 		});
 	},
